@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;800&display=swap" rel="stylesheet">
+    <title>Exe 33</title>
+    <style>
+        #texto
+        {
+            font-size: 2rem;
+            font-family: 'Lexend', sans-serif;
+            text-align:center;
+        }
+        .img{
+            border-radius: 20px;
+        }
+        .centralizar {
+            text-align: center;
+        }
+        canvas {
+        width: 500px;
+        border: 1px solid black;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+    <h1 id="texto">Quadrado retângulo</h1>
+    <canvas id="canvas" width="400" height="400" onclick="drawRectangle(event)"></canvas>
+
+    <script>
+        function drawRectangle(event) {
+          var canvas = document.getElementById('canvas');
+          var ctx = canvas.getContext('2d');
+          ctx.beginPath();
+          ctx.rect(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop, 50, 20);
+          ctx.stroke();
+        }
+      </script>
+</body>
+</html>
